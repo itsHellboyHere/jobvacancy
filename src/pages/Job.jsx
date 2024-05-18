@@ -31,10 +31,10 @@ const Job = () => {
 
   return (
     <>
-    <section className="col">
+    
     <JobContainer/>
     <PaginationContainer/>
-    </section>
+    
     </>
   )
 }
