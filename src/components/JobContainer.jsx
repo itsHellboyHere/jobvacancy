@@ -31,7 +31,7 @@ const JobContainer = () => {
 
     return (
         <>
-            <section className="col ">
+            <section className="col">
                 <div className="flex justify-items-center justify-center">
                     {/* <h4 className="tracking-tighter font-bold text-xl">Jobs</h4> */}
                 </div>
