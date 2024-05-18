@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .align-element{
+        @apply mx-auto max-w-6xl px-8;
+    }
+}
+.col{
+    /* background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(241,244,244,1) 50%, rgba(252,176,69,1) 100%); */
+/* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
+/* background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
+
+}

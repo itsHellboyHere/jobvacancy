@@ -1,0 +1,7 @@
+export { default as HomeLayout } from '../pages/HomeLayout'
+export { default as Contact } from '../pages/Contact'
+export { default as Job } from '../pages/Job'
+export { default as Landing } from '../pages/Landing'
+export { default as Error } from '../pages/Error'
+export { default as SingleJob } from '../pages/SingleJob'
+export { default as ApplyJob } from '../pages/ApplyJob'
