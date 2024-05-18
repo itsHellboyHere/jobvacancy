@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const Hero = () => {
   return (
     
-      <div className=' col align-element w-screen py-20  px-5 grid md:grid-cols-2 items-center gap-6'>
+      <div className=' align-element w-screen py-20  px-5 grid md:grid-cols-2 items-center gap-6'>
         <article  >
           <h1 className='text-5xl font-bold tracking-wider '>Looking for Vacancies?</h1>
           <p className='mt-4 text-3xl text-slate-700 capitalize tracking-wider '>
