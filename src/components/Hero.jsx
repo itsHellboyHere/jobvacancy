@@ -2,11 +2,11 @@ import hero from '../assets/hero.svg'
 import { Link } from 'react-router-dom'
 const Hero = () => {
   return (
-    <div className='col py-20'>
-      <div className=' align-element px-5 grid md:grid-cols-2 items-center gap-8'>
-        <article className='align-element'>
-          <h1 className='text-6xl font-bold tracking-wider'>Looking for Vacancies?</h1>
-          <p className='mt-4 text-3xl text-slate-700 capitalize tracking-wide'>
+    
+      <div className=' col align-element w-screen py-20  px-5 grid md:grid-cols-2 items-center gap-6'>
+        <article  >
+          <h1 className='text-5xl font-bold tracking-wider '>Looking for Vacancies?</h1>
+          <p className='mt-4 text-3xl text-slate-700 capitalize tracking-wider '>
             You're at right place
           </p>
           {/* <p className='mt-2 text-lg text-slate-700 capitalize tracking-wide'>
@@ -27,11 +27,11 @@ const Hero = () => {
             </a>
           </div> */}
         </article>
-        <article className=' md:block align-element'>
+        <article className=' md:block '>
           <img src={hero} className='h-80 lg:h-96' />
         </article>
       </div>
-    </div>
+    
   )
 }
 export default Hero
