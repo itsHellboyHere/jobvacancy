@@ -26,7 +26,7 @@ const SingleJob = () => {
     const id =job._id
 
     return (
-        <div className="min-h-screen col bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen col w-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
             <div className="align-element max-w-7xl mx-auto">
                 <div className="mb-8">
                     <Link to="/jobs" className="text-blue-700 hover:underline">← Back to Jobs</Link>

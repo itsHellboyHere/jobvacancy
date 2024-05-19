@@ -86,14 +86,14 @@ const ApplyJob = () => {
     };
 
     return (
-        <section className="col">
+        <section className="col w-screen">
             <div className="mb-8 align-element ">
                     <Link to={`/jobs/${id}`} className="text-blue-700 hover:underline">← Back to Job</Link>
                 </div>
             <div className="mx-auto h-screen py-2 max-w-7xl px-8 text-black">
                 <SectionTitle text='Apply' className='text-2xl font-bold mb-2'></SectionTitle>
                 
-                <form onSubmit={handleSubmit} className="align-element">
+                <form onSubmit={handleSubmit} className="align-element mt-4">
                     <div className="mb-4">
                         <label className="block text-sm font-medium text-gray-600">Name:</label>
                         <input
