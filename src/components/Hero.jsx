@@ -1,13 +1,21 @@
 import hero from '../assets/hero.svg'
 import { Link } from 'react-router-dom'
+import  '../assets/Hero.css';
 const Hero = () => {
   return (
     
       <div className=' align-element  py-28  px-4 grid md:grid-cols-2 items-center gap-6'>
-        <article  >
-          <h1 className='text-5xl font-bold tracking-wider '>Looking for Vacancies?</h1>
-          <p className='mt-4 text-3xl text-slate-700 capitalize tracking-wider '>
-            You're at right place
+        <article >
+          <h1 className='text-5xl font-bold tracking-wider'> <span className='hero-text'>Looking for </span> 
+          <span className='hero-text'>
+            Vacancies?
+            </span></h1>
+          <p className='mt-4 text-3xl text-slate-700 capitalize tracking-widest '>
+            <span className='hero-text2'>You're</span>
+          <span className='hero-text2'>at</span>
+          <span className='hero-text2'>the</span>
+          <span className='hero-text2'>right</span>
+          <span className='hero-text2'>place</span>
           </p>
           {/* <p className='mt-2 text-lg text-slate-700 capitalize tracking-wide'>
             
@@ -28,7 +36,7 @@ const Hero = () => {
           </div> */}
         </article>
         <article className=' md:block '>
-          <img src={hero} className='h-80 lg:h-96' />
+          <img src={hero} className='h-80 lg:h-96 hero-img ' />
         </article>
       </div>
     

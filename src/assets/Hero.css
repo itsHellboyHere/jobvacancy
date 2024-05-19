@@ -1,0 +1,71 @@
+
+@keyframes fadeInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    50%{
+        opacity: 0.5;
+        transform: translate(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes fadeInRight{
+        0%{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0);
+        }
+}
+
+.hero-text{
+    animation:fadeInRight 3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hero-img{
+    animation:fadeIn 2s ease-in-out forwards;
+}
+.hero-text:nth-child(2){
+    animation:fadeIn 3s ease-in-out infinite;
+}
+
+.hero-text2 {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out infinite;
+}
+.hero-text2:nth-child(1) {
+  animation-delay: 2s; /* Adjust delay for the second word */
+}
+
+.hero-text2:nth-child(2) {
+  animation-delay: 1s; /* Adjust delay for the second word */
+}
+.hero-text2:nth-child(3) {
+  animation-delay: 1s; /* Adjust delay for the second word */
+}
+.hero-text2:nth-child(4) {
+  animation-delay: 1s; /* Adjust delay for the second word */
+}
+
+.nav-ani{
+    animation: fadeIn 2s ease-in-out forwards;
+}
