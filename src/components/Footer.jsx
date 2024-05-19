@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 border-t border-gray-700 pt-4 text-center">
-          <p>&copy; 2024 JobVacancy. All rights reserved.</p>
+          <p>&copy; 2024 SSEJobVacancy. All rights reserved.</p>
         </div>
       </div>
     </footer>
