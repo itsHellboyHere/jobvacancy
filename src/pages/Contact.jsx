@@ -3,7 +3,7 @@ import { SectionTitle } from '../components';
 
 const Contact = () => {
   return (
-    <section className='col'>
+    <section className='col w-screen'>
 
    
     <div className="  align-element h-screen  p-8">
@@ -44,7 +44,7 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Additional Info (Dummy Example) */}
+       
         <div className="flex items-center space-x-4">
           <FaEnvelope className="text-2xl text-teal-600" />
           <div>
