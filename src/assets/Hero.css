@@ -26,7 +26,7 @@
 }
 
 .hero-text{
-    animation:fadeInRight 3s ease-in-out forwards;
+    animation:fadeInRight 1s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
@@ -41,7 +41,7 @@
   }
 }
 .hero-img{
-    animation:fadeIn 2s ease-in-out forwards;
+    animation:fadeIn 1s ease-in-out forwards;
 }
 .hero-text:nth-child(2){
     animation:fadeIn 3s ease-in-out infinite;
@@ -66,6 +66,3 @@
   animation-delay: 1s; /* Adjust delay for the second word */
 }
 
-.nav-ani{
-    animation: fadeIn 2s ease-in-out forwards;
-}
