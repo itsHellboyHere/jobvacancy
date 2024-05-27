@@ -2,28 +2,31 @@ import axios from "axios";
 import { customFetch } from "../util";
 import { useLoaderData } from "react-router-dom";
 import { Link } from "react-router-dom";
-import {formatDate} from '../util/index'
+import { formatDate } from '../util/index';
 const url = 'https://jobportalapi-5pen.onrender.com';
 import { IoLocationSharp } from "react-icons/io5";
 
-const singleJobQuery = (id) =>{
+const singleJobQuery = (id) => {
     return {
-        queryKey:['singleJob',id],
-        queryFn:()=> customFetch(`/api/v1/job/${id}`)
-    }
+        queryKey: ['singleJob', id],
+        queryFn: () => customFetch(`/api/v1/job/${id}`)
+    };
 }
+
 export const loader = (queryClient) => async ({ params }) => {
     const { id } = params;
-    const res= await queryClient.ensureQueryData(singleJobQuery(params.id))
+    const res = await queryClient.ensureQueryData(singleJobQuery(params.id));
     const job = res.data.job;
-    return {job}
-  
+    return { job };
 };
 
 const SingleJob = () => {
     const { job } = useLoaderData();
-    const { company, location, description, position, jobType, createdAt, salary } = job;
-    const id =job._id
+    const { company, location, description, position, jobType, createdAt, salary, qualification } = job;
+    const id = job._id;
+
+    // Split the description into sentences and join with <br />
+    const formattedDescription = description.split('.').join('.<br />');
 
     return (
         <div className="min-h-screen col w-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
@@ -40,7 +43,6 @@ const SingleJob = () => {
                         <dl className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 sm:gap-y-8 sm:gap-x-6">
                             <div className="sm:col-span-1">
                                 <dt className="text-sm font-medium text-gray-500">Location</dt>
-                            
                                 <dd className="mt-1 text-sm text-gray-900">{location.city}</dd>
                             </div>
                             <div className="sm:col-span-1">
@@ -55,15 +57,17 @@ const SingleJob = () => {
                                 <dt className="text-sm font-medium text-gray-500">Salary</dt>
                                 <dd className="mt-1 text-sm text-gray-900">{salary}</dd>
                             </div>
+                            <div className="sm:col-span-1">
+                                <dt className="text-sm font-medium text-gray-500">Qualification</dt>
+                                <dd className="mt-1 text-sm text-gray-900">{qualification}</dd>
+                            </div>
                         </dl>
                     </div>
                     <div className="bg-gray-50 px-4 py-5 sm:px-6">
                         <h3 className="text-lg leading-6 font-medium text-gray-900">Job Description</h3>
-                        <div className="mt-2 text-sm text-gray-900">
-                            <p>{description}</p>
-                        </div>
+                        <div className="mt-2 text-sm text-gray-900" dangerouslySetInnerHTML={{ __html: formattedDescription }} />
                     </div>
-                     <div className="px-4 py-3 bg-gray-200 text-right sm:px-6">
+                    <div className="px-4 py-3 bg-gray-200 text-right sm:px-6">
                         <Link to={`/jobs/apply/${id}`} className="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Apply Now</Link>
                     </div>
                 </div>
